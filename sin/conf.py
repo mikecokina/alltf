@@ -5,7 +5,7 @@ n_nodes_hl2 = 1000
 input_size = 1
 batch_size = 10000
 learning_rate = 1e-3
-train_epochs = 5000
+train_epochs = 1000
 precession_tol = 1e-1
 
 sin_start = -2.5 * np.pi

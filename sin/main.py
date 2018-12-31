@@ -22,6 +22,7 @@ def seed(s=None):
 def get_samples():
     x = np.arange(conf.sin_start, conf.sin_end, 0.001)
     x = x.reshape(len(x), 1)
+    x += 0.1*np.random.randn(*x.shape)
     y = np.sin(x)
 
     train_samples = np.array(list(zip(x, y)))
