@@ -76,13 +76,14 @@ class MlpNet(object):
         )
         # treshold function
         layer_1 = tf.nn.tanh(layer_1)
+
         layer_2 = tf.add(
             tf.matmul(layer_1, self.hidden_2_layer["weights"]),
             self.hidden_2_layer["biases"]
         )
         # treshold function
         layer_2 = tf.nn.tanh(layer_2)
-
+        #
         self.nn_model_output = tf.add(
             tf.matmul(layer_2, self.output_layer["weights"]),
             self.output_layer["biases"]
